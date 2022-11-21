@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_21_051218) do
+ActiveRecord::Schema.define(version: 2022_11_21_061316) do
+
+  create_table "money", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "salary"
+    t.integer "invesotment"
+    t.integer "sidejob"
+    t.integer "other"
+    t.integer "food"
+    t.integer "daily"
+    t.integer "transportation"
+    t.integer "fashion"
+    t.integer "hobby"
+    t.integer "others"
+    t.datetime "start_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
