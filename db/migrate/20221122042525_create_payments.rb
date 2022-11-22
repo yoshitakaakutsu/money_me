@@ -1,12 +1,8 @@
-class CreateMoney < ActiveRecord::Migration[6.1]
+class CreatePayments < ActiveRecord::Migration[6.1]
   def change
-    create_table :money do |t|
+    create_table :payments do |t|
       
       t.integer :user_id
-      t.integer :salary
-      t.integer :invesotment
-      t.integer :sidejob
-      t.integer :other
       t.integer :food
       t.integer :daily
       t.integer :transportation

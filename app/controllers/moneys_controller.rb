@@ -10,4 +10,5 @@ class MoneysController < ApplicationController
 
   def edit
   end
+  
 end
