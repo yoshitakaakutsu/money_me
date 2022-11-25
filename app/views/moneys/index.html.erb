@@ -1,2 +1,4 @@
-<h1>Moneys#index</h1>
+<h1><%= current_user.name %>さんの収支記録</h1>
 <p>Find me in app/views/moneys/index.html.erb</p>
+
+<%= pie_chart @chart %>
