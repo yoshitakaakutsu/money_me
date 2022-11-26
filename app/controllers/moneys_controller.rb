@@ -9,6 +9,7 @@ class MoneysController < ApplicationController
   end
 
   def new
+    @payment = Payment.new
   end
 
   def edit

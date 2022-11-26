@@ -1,2 +1,9 @@
-<h1>Moneys#new</h1>
-<p>Find me in app/views/moneys/new.html.erb</p>
+<h1>収支記録の追加</h1>
+
+<%= form_with model: @payment, url: moneys_new_path, method: :post do |f| %>
+  <div>
+    <%= f.label :日 %>
+    <%= f.text_field :start_time %>
+  </div>
+<% end %>
+
