@@ -10,6 +10,7 @@ class MoneysController < ApplicationController
 
   def new
     @payment = Payment.new
+    @income = Income.new
   end
 
   def edit
