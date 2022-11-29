@@ -1,2 +1,47 @@
 <h1>収支記録の詳細</h1>
 
+<div>今月の収入</div>
+
+<div>
+  <%= pie_chart @chart %>
+</div>
+<div>
+  給与　<%= @payment %>円
+</div>
+<div>
+  投資　<%= @payment %>円
+</div>
+<div>
+  副業　<%= @payment %>円
+</div>
+<div>
+  その他　<%= @payment %>円
+</div>
+
+<div>今月の支出</div>
+
+<div>
+  <%= pie_chart @charts %>
+</div>
+<div>
+  食費　<%= @income %>円
+</div>
+<div>
+  日用品　<%= @income %>円
+</div>
+<div>
+  交通費　<%= @income %>円
+</div>
+<div>
+  ファッション　<%= @income %>円
+</div>
+<div>
+  趣味・娯楽　<%= @income %>円
+</div>
+<div>
+  その他　<%= @income %>円
+</div>
+
+<div>
+  <%= pie_chart @charts %>
+</div>
