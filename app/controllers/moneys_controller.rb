@@ -2,7 +2,7 @@ class MoneysController < ApplicationController
   def index
     @payment = Payment.all
     @income = Income.all
-    @chart = Payment.order('created_at ASC').group(:name)
+    @chart = Payment.order('created_at ASC')
   end
 
   def show
@@ -11,6 +11,9 @@ class MoneysController < ApplicationController
   def new
     @payment = Payment.new
     @income = Income.new
+  end
+  
+  def created
   end
 
   def edit

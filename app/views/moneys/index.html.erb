@@ -1,4 +1,14 @@
 <h1><%= current_user.name %>さんの収支記録</h1>
-<p>Find me in app/views/moneys/index.html.erb</p>
+
+<div>
+  収入　<%= @payment %>円
+</div>
+<div>
+  支出　<%= @income %>円
+</div>
+
+<div>
+  <%= link_to "詳細を見る", moneys_show_path %>
+</div>
 
 <%= pie_chart @chart %>
