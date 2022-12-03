@@ -1,0 +1,16 @@
+<header>
+  <nav>
+      
+    <div>
+      <ul>
+        <li><%= link_to "収支記録",  moneys_index_path %></li>
+        <li><%= link_to "記録する", moneys_new_path %></li>
+      </ul>
+    </div>
+
+      <% if user_signed_in? %>
+        <p><%= current_user.name %>さんの収支記録</p>
+      <% end %>
+     
+  </nav>
+</header>
