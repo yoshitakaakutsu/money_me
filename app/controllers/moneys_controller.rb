@@ -19,6 +19,7 @@ class MoneysController < ApplicationController
   end
   
   def created
+    
   end
 
   def edit
