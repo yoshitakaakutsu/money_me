@@ -2,5 +2,41 @@
 
 <h1>収支記録の編集</h1>
 
+<h2>支払登録</h2>
+　<%= form_with model: @payment, url: moneys_new_path, method: :post do |f| %>
+    <div>
+      <%= f.label :日 %>
+      <%= f.date_field :start_time %>
+    </div>
+    <div>
+      <%= f.label :内訳%>
+      <%= f.select :breakdown, [["食費", "食費"], ["日用品", "日用品"], ["交通費", "交通費"], ["ファッション", "ファッション"],["趣味・娯楽","趣味・娯楽"],["その他","その他"]], include_blank: "選択して下さい" %>
+    </div>
+    <div>
+      <%= f.label :金額 %>
+      <%= f.text_field :money %>円
+    </div>
+    <div>
+      <%= f.submit '送信'%>
+    </div>
+  <% end %>
 
+<h2>収入登録</h2>
+  <%= form_with model: @income, url: moneys_new_path, method: :post do |f| %>
+    <div>
+      <%= f.label :日 %>
+      <%= f.date_field :start_time %>
+    </div>
+    <div>
+      <%= f.label :内訳%>
+      <%= f.select :breakdown, [["給与", "給与"], ["賞与", "賞与"], ["投資", "投資"], ["副業", "副業"],["趣味・娯楽"],["その他","その他"]], include_blank: "選択して下さい" %>
+    </div>
+    <div>
+      <%= f.label :金額 %>
+      <%= f.text_field :money %>円
+    </div>
+    <div>
+      <%= f.submit '送信'%>
+    </div>
+  <% end %>
 
